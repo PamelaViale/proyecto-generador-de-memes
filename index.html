@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/e0b1eca94c.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e0b1eca94c.js" crossorigin="anonymous"></script>
+    <title>Proyecto Editor de memes</title>
+</head>
+<body>
+    <nav class="nav-meme-generator">
+        <h1 class="title-meme-generator">Generador de Memes</h1>
+        <div class="buttoms-nav">
+            <button class="img-buttom" id=""><i class="fa-sharp fa-solid fa-file-image"></i> Imagen</button>
+            <button class="txt-buttom" id=""><i class="fa-sharp fa-solid fa-font"></i>Texto</button>
+            <button class="dark-buttom" id="" aria-label="cambiar a modo oscuro"><i
+                    class="fa-solid fa-lightbulb"></i>Modo oscuro</button>
+       </div>
+    </nav>
+
+    <main>
+        <!-- CAJA DE MEME-->
+        <section class="main-box">
+            <div class="box-container" id="box-container">
+                <p class="top-text-box" id="top-text-box">Top Text</p>
+                <div class="body-box" id="bodybox"></div>
+                <p class="Bottom-text-box" id="Bottom-text-box">Bottom text</p>
+            </div>
+            <button type="" class="download-bottom" id="download-bottom"><i class="fas fa-download button-icon-text" aria-hidden="true"></i>Download
+                Meme</button>
+        </section>
+        <!-- ASIDE IMAGEN -->
+       <section>
+            <aside class="section-image-panel" id="">
+                <button class="buttom-x" id="" aria-label="close-aside"><i class="fas fa-times"
+                        aria-hidden="true"></i></button>
+                <section class="section-aside-img" id="">
+                    <h2 class="title-aside-image">IMAGEN</h2>
+                    <div class="aside-url-box">
+                        <h3 class="aside-url">URL</h3>
+                        <input type="text" class="text-aside" id="" aria-label="URL imagen">
+                    </div> 
+                <div class="background-menu">
+                            <h3 class="background-menu-filter">FONDO</h3>
+                        <div class="background-options">
+                            <input type="color" class="input-background" value="#ffffff">
+                            <span></span>
+                        
+                            <div class="opcion-select">
+                                <select class="" id="" name="" id="">
+                                     <option value="">Ninguno</option>
+                                     <option value="">Aclarar</option>
+                                     <option value="">Oscurecer</option>
+                                    <option value="">Diferencia</option>
+                                    <option value="">Luminocidad</option>
+                                    <option value="">Multiplicar</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> 
+</section>
+                <section class="filter-opcions">
+                    <h3 class="filter-title">FILTROS</h3>
+                    <div class="filter-mods">
+                        <label for="">BRILLO</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">OPACIDAD</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">CONTRASTES</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">BRILLO</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">DEFENFOQUE</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">ESCALA DE GRISES</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">SEPIA</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">HUE</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">SATURADO</label>
+                        <input type="range" id="">
+                    </div>
+                    <div class="filter-mods">
+                        <label for="">NEGATIVO</label>
+                        <input type="range" id="">
+                    </div>
+                </section>
+                <button class="filter-reset" id="">Reestablecer filtros</button>
+        </section>
+       <section class="" id="">
+        </section> 
+<!-- ASIDE TEXTO -->
+                <!-- <section class="section-aside-txt">
+                    <h2 class="title-aside-text">TEXTO</h2>
+                    <div class="aside-text-box">
+                        <h3 class="">SUPERIOR</h3>
+                        <input type="text" class="" id="" aria-label="">
+                        <div class="checkbox-box-text">
+                            <input type="checkbox" class="checkbox-aside-text" id="" aria-label="text-aside">
+                            <label for="checkbox">Sin texto superior</label>
+                        </div>
+                    </div>
+                    <div class="aside-url-box">
+                        <h3 class="">INFERIOR</h3>
+                        <input type="text" class="" id="" aria-label="Bottom Text">
+                        <div class="checkbox-box-text">
+                            <input type="checkbox" class="checkbox-aside-text" id="" aria-label="URL imagen">
+                            <label for="checkbox">Sin texto inferior</label>
+                        </div>
+                    </div>
+                    <div class="asidebox-font">
+                        <h3 class="title-font-text">FUENTE</h3>
+                        <select name="font-family" id="text-font-select" class="select-font-family"
+                            aria-label="Font Family">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact" selected="">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                        </select>
+                        <div></div>
+                        <div class="font-and-size">
+                            <input type="number" name="font-size" aria-label="fontSize"
+                                class="font-size-text" id="font-size-text" min="12" value="40">
+                            <div>
+                                <button class="button-defect" id="text-left-align-button"
+                                    aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left"
+                                        aria-hidden="true"></i></button>
+
+                                <button class="button-defect" id="text-center-align-button"
+                                    aria-label="Alinear texto al centro"><i class="fas fa-align-center"
+                                        aria-hidden="true"></i></button>
+
+                                <button class="button-defect" id="text-right-align-button"
+                                    aria-label="Alineat texto a la derecha"><i class="fas fa-align-right"
+                                        aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                <section class="background-color">
+                        <div>
+                            <h3 class="panel-control-title">COLOR</h3>
+                            <div>
+                                <input name="Color de texto" type="color" id="text-color-input" value="#000000"
+                                    aria-label="Color de texto">
+                                <span id="text-color" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="background-panel">
+                            <h3 class="panel-control-title">FONDO</h3>
+                            <div class="panel-control-color">
+                                <input name="Color de fondo de texto" type="color" id="text-background-color-input"
+                                    value="#FFFFFF" aria-label="Color de fondo de texto">
+                                <span id="text-background-color" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </section>
+                            <div class="checkbox-box">
+                                <input type="checkbox" id="">
+                                <label for="text-no-background-checkbox">Fondo
+                                    transparente</label>
+                            </div>
+                        
+          
+                        <div class="box-button-defect">
+                            <h3>CONTORNO</h3>
+                            <div class="buttons-defect-box">
+                                <button class="button-defect-outline" id="no-outline-button">Ninguno</button>
+                                <button class="button-defect-outline" id="light-outline-button">Claro</button>
+                                <button class="button-defect-outline" id="dark-outline-button">Oscuro</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>ESPACIADO</h3>
+                            <div class="spacing-box">
+                                <input type="number" id="" class="spacing-box-input"  aria-label="Espaciado" min="10" max="50" value="35">
+                            </div>
+                        </div>
+                       
+                        </div>
+                        <div class="lineal-box">
+                            <h3 class="lineal-title">INTERLINEADO</h3>
+                            <div>
+                                <select id="line-height-input" class="lineal-title-input" aria-label="Interlineado">
+                                    <option value="0.8">0.8</option>
+                                    <option value="1">1</option>
+                                    <option value="1.2" selected="">1.2</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2">2</option>
+                                    <option value="2.5">2.5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+<script src="js/script.js"></script>
+
+            </aside>
+    </main>
+</body>
+
+</html>
+
+
+<!-- Iconitos -->
+<!--- Icono img oscuro <i class="fa-sharp fa-solid fa-file-image"></i> --->
+<!--- Icono img claro <i class="fa-regular fa-file-image"></i> --->
+
+<!--- Icono img claro <i class="fa-regular fa-file-image"></i> --->
+<!--- Icono img claro <i class="fa-regular fa-file-image"></i> --->
+
+<!--- foco img oscuro <i class="fa-solid fa-lightbulb"></i> --->
+<!--- foco img claro <i class="fa-duotone fa-font"></i> --->
+
+
+
+<!--- dowload <i class="fa-sharp fa-regular fa-download"></i> --->
+
+<!--- https://fontawesome.com/search --->
